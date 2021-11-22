@@ -1,0 +1,99 @@
+    <link rel="stylesheet" type="text/css" href="/css/project.css">
+  <div class="jumbotron p-4 p-md-5 mt-4 text-white rounded bg-dark">
+    <div class="container">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 font-italic">Find some exciting projects here</h1>
+        <p class="lead my-3">If you have an epic project idea which you want to build, you came to the right place. Find your perfect team and kick start your epic project! 
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+
+      
+  </div>
+  <div class="container">
+    <div class="row mb-2">
+      <div class="col">
+        <div float-left>
+          <a href="/createIt"><button class="btn btn-lg btn-success mt-0 mb-3 p-2">Create a Project Post</button></a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="dropdown show btn btn-warning float-right">
+          <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categories
+          </a>                      
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#">Web Development</a>
+            <a class="dropdown-item" href="#">BlockChain</a>
+            <a class="dropdown-item" href="#">Security</a>
+            <a class="dropdown-item" href="#">IoT</a>
+            <a class="dropdown-item" href="#">AIML</a>
+            <a class="dropdown-item" href="#">Python</a>
+            <a class="dropdown-item" href="#">Ruby</a>
+            <a class="dropdown-item" href="#">Newbie</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+      
+        <% if (details.length != 0) { %>
+       <div class="col-md-6">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static bg-white h-md-250">
+            <div class="category">
+              <button type="button" class="btn btn-info"><%= details[0].projectdetails.PTag %></button> 
+                <%= details[0].projectdetails.PName %>
+                &nbsp &nbsp <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg> <%= details[0].personaldetails.FName %>
+            </div>            
+            <h4 class="mb-0"><%= details[0].projectdetails.PName %></h4>
+            <div class="mb-1 text-muted">Today</div>
+            <p class="card-text mb-auto"><%= details[0].projectdetails.PAbout %></p>
+            <a href="/project/bhatanagar88.aditya@gmail.com/Lorem ipsum">Continue reading</a>
+          </div>
+        </div>
+      </div>   
+   
+
+    <% } %>
+    
+    <div class="col-md-6">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static bg-white h-md-250">
+            <div class="category">
+              <button type="button" class="btn btn-info">AIML</button> 
+                SPAM CLASSIFIER
+                &nbsp &nbsp <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg> Adam
+            </div>            
+            <h4 class="mb-0">Spam Classifier</h4>
+            <div class="mb-1 text-muted">Yesterday</div>
+            <p class="card-text mb-auto">Spam classifier machine learning model is need of the hour as every day we get thousands of mails and don’t have time to manually reject each spam</p>
+            <a href="{% url 'confession:post-detail' post.slug  %}">Continue reading</a>
+          </div>
+        </div>
+      </div>   
+      <div class="col-md-6">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static bg-white h-md-250">
+            <div class="category">
+              <button type="button" class="btn btn-info">IoT</button> 
+                Night Patrol Robot
+                &nbsp &nbsp <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg> Eve
+            </div>            
+            <h4 class="mb-0">Night Patrol Bot</h4>
+            <div class="mb-1 text-muted">Today</div>
+            <p class="card-text mb-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero lectus, blandit vel eleifend vitae, sollicitudin eget risus. Quisque consectetur eu risus non tristique. Lorem ipsum dolor sit amet.</p>
+            <a href="{% url 'confession:post-detail' post.slug  %}">Continue reading</a>
+          </div>
+        </div>
+      </div>         
+    </div>
+
