@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="/css/created_1.css">
+    <link rel="stylesheet" href="/css/created_2.css">
+
+</head>
+|
+|
+|
+<body>
+    <div class="container mt-3 mb-3">
+        <div class="card m-5 p-5 shadow p-3 mb-5 bg-white rounded">
+            <h4 class="card-header"><%= details[0].projectdetails.PName %> <button type="button" class="btn btn-info"><%= details[0].projectdetails.PTag %></button></h4><p class="text-muted" style="text-align: right; font-size: medium;"><svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg> <%= details[0].personaldetails.FName %></p>
+       
+            <p class="card-text mb-auto" style="text-align: justify;"><%= details[0].projectdetails.PAbout %></p>
+            <a href="/proposalaccepted"><button type="button" class="btn btn-info" style="position: relative; right: 0">Apply</button></a>
+        </div>
+    </div>
+
+</body>
+
+</html>
